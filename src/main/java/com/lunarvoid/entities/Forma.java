@@ -1,22 +1,21 @@
 package com.lunarvoid.entities;
 
 import com.lunarvoid.interfaces.FormaInterface;
+import com.lunarvoid.enums.TipoFormas;
 
-abstract class Forma implements FormaInterface {
-    private String nome;
 
-    public Forma(String nome){
-        setName(nome);
+public abstract class Forma implements FormaInterface {
+    private TipoFormas tipo;
+
+    public Forma(TipoFormas tipo){
+        setTipo(tipo);
     }
 
-    public String getNome(){
-        return this.nome;
+    public TipoFormas getTipo(){
+        return this.tipo;
     }
 
-    private void setName(String nome){
-        if (nome == null || nome.isBlank()){
-            throw new IllegalArgumentException("nome da forma não pode ser vazio");
-        }
-        this.nome = nome.trim().toUpperCase();
+    private void setTipo(TipoFormas tipo){
+        this.tipo = tipo;
     }
 }

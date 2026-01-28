@@ -1,26 +1,27 @@
 package com.lunarvoid.entities;
 
-import java.lang.StringBuilder;
 import com.lunarvoid.enums.TipoFormas;
 
-public class Quadrado extends Forma {
-    private Double lado;
+public class Circulo extends Forma {
 
-    public Quadrado(Double lado){
-        super(TipoFormas.QUADRADO);
-        setLado(lado);
+    private Double diametro;
+
+    public Circulo(Double diametro){
+        super(TipoFormas.CIRCULO);
+        setDiametro(diametro);
     }
 
-    private void setLado(Double lado){
-        this.lado = lado;
+    private void setDiametro(Double diametro){
+        this.diametro = diametro;
     }
 
     public Double area(){
-        return (lado * lado);
+        Double raio = this.diametro / 2;
+        return Math.PI * (raio * raio);
     }
 
     public Double perimetro(){
-        return (lado * 4);
+        return Math.PI * this.diametro;
     }
 
     @Override
@@ -29,8 +30,8 @@ public class Quadrado extends Forma {
 
         sb.append("Tipo: ");
         sb.append(getTipo().toString());
-        sb.append(" Lado: ");
-        sb.append(this.lado);
+        sb.append(" Diametro: ");
+        sb.append(this.diametro);
         sb.append(" Area: ");
         sb.append(String.format("%.2f",area()));
         sb.append(" Perimetro: ");
@@ -38,4 +39,5 @@ public class Quadrado extends Forma {
 
         return sb.toString();
     }
+    
 }
