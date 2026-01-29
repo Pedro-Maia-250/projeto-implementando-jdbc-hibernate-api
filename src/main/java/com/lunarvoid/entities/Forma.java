@@ -3,7 +3,6 @@ package com.lunarvoid.entities;
 import com.lunarvoid.interfaces.FormaInterface;
 import com.lunarvoid.enums.TipoFormas;
 
-
 public abstract class Forma implements FormaInterface {
     private TipoFormas tipo;
 
