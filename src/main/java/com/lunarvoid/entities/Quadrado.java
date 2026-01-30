@@ -15,6 +15,10 @@ public class Quadrado extends Forma {
         this.lado = lado;
     }
 
+    public Double getLado(){
+        return this.lado;
+    }
+
     public Double area(){
         return (lado * lado);
     }

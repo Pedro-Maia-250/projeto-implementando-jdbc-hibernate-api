@@ -1,7 +1,10 @@
 D:\Projetos\JAVA\projeto-hibernate-dao-api\src\main\java\com\lunarvoid\App.java
 D:\Projetos\JAVA\projeto-hibernate-dao-api\src\main\java\com\lunarvoid\dao\CirculoDAO.java
+D:\Projetos\JAVA\projeto-hibernate-dao-api\src\main\java\com\lunarvoid\dao\DaoFactoryForma.java
 D:\Projetos\JAVA\projeto-hibernate-dao-api\src\main\java\com\lunarvoid\dao\FormaDAO.java
 D:\Projetos\JAVA\projeto-hibernate-dao-api\src\main\java\com\lunarvoid\dao\impl\CirculoJDBC.java
+D:\Projetos\JAVA\projeto-hibernate-dao-api\src\main\java\com\lunarvoid\dao\impl\QuadradoJDBC.java
+D:\Projetos\JAVA\projeto-hibernate-dao-api\src\main\java\com\lunarvoid\dao\impl\RetanguloJDBC.java
 D:\Projetos\JAVA\projeto-hibernate-dao-api\src\main\java\com\lunarvoid\dao\QuadradoDAO.java
 D:\Projetos\JAVA\projeto-hibernate-dao-api\src\main\java\com\lunarvoid\dao\RetanguloDAO.java
 D:\Projetos\JAVA\projeto-hibernate-dao-api\src\main\java\com\lunarvoid\db\DB.java

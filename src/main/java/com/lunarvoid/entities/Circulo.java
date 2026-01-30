@@ -15,6 +15,10 @@ public class Circulo extends Forma {
         this.diametro = diametro;
     }
 
+    public Double getDiametro(){
+        return this.diametro;
+    }
+
     public Double area(){
         Double raio = this.diametro / 2;
         return Math.PI * (raio * raio);

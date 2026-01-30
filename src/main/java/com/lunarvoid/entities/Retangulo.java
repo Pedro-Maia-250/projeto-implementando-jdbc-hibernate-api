@@ -16,6 +16,14 @@ public class Retangulo extends Forma {
         this.lado2 = lado2;
     }
 
+    public Double getLado1(){
+        return this.lado1;
+    }
+
+    public Double getLado2(){
+        return this.lado2;
+    }
+
     public Double area(){
         return (this.lado1 * this.lado2);
     }

@@ -1,34 +1,41 @@
 //dao
-
-
 package com.lunarvoid;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
+import com.lunarvoid.dao.CirculoDAO;
+import com.lunarvoid.dao.DaoFactoryForma;
+import com.lunarvoid.dao.QuadradoDAO;
+import com.lunarvoid.dao.RetanguloDAO;
 import com.lunarvoid.entities.Circulo;
-import com.lunarvoid.entities.Forma;
 import com.lunarvoid.entities.Quadrado;
 import com.lunarvoid.entities.Retangulo;
 
 public class App {
     public static void main(String[] args) {
-        try(Scanner sc = new Scanner(System.in)){
             
-            List<Forma> formas = new ArrayList<>();
+        QuadradoDAO qdao = DaoFactoryForma.createQuadradoDAO();
+        CirculoDAO cdao = DaoFactoryForma.createCirculoDAO();
+        RetanguloDAO rdao = DaoFactoryForma.createRetanguloDAO();
 
-            formas.add(new Quadrado(2.3));
-            formas.add(new Circulo(5.0));
-            formas.add(new Retangulo(5.0, 3.6));
+        qdao.insert(new Quadrado(5.4));
+        qdao.insert(new Quadrado(3.2));
+        qdao.insert(new Quadrado(8.0));
 
+        cdao.insert(new Circulo(2.4));
+        cdao.insert(new Circulo(8.0));
 
-            for (Forma forma : formas) {
-                System.out.println(forma);
-            }
+        rdao.insert(new Retangulo(5.4,3.2));
 
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        for (Quadrado q : qdao.findAll()) {
+            System.out.println(q);
         }
+
+        for (Circulo c : cdao.findAll()) {
+            System.out.println(c);
+        }
+
+        for (Retangulo r : rdao.findAll()) {
+            System.out.println(r);
+        }
+
     }
 }

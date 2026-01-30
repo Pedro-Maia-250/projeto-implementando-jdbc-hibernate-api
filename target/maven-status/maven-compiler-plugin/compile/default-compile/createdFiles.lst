@@ -1,12 +1,15 @@
+com\lunarvoid\dao\DaoFactoryForma.class
 com\lunarvoid\App.class
 com\lunarvoid\entities\Retangulo.class
 com\lunarvoid\db\DB.class
 com\lunarvoid\utilitarios\Config.class
+com\lunarvoid\dao\impl\RetanguloJDBC.class
 com\lunarvoid\entities\Quadrado.class
 com\lunarvoid\dao\FormaDAO.class
 com\lunarvoid\dao\QuadradoDAO.class
 com\lunarvoid\entities\Circulo.class
 com\lunarvoid\dao\RetanguloDAO.class
+com\lunarvoid\dao\impl\QuadradoJDBC.class
 com\lunarvoid\entities\Forma.class
 com\lunarvoid\dao\impl\CirculoJDBC.class
 com\lunarvoid\enums\TipoFormas.class
