@@ -2,14 +2,22 @@ package com.lunarvoid.entities;
 
 import java.lang.StringBuilder;
 import com.lunarvoid.enums.TipoFormas;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Column;
 
+@Entity
+@Table(name = "quadrado")
 public class Quadrado extends Forma {
+    @Column(nullable = false)
     private Double lado;
 
     public Quadrado(Double lado){
         super(TipoFormas.QUADRADO);
         setLado(lado);
     }
+
+    protected Quadrado(){}
 
     private void setLado(Double lado){
         this.lado = lado;

@@ -1,10 +1,19 @@
 package com.lunarvoid.entities;
 
 import com.lunarvoid.enums.TipoFormas;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Column;
 
+@Entity
+@Table(name = "retangulo")
 public class Retangulo extends Forma {
+    @Column(nullable = false)
     private Double lado1;
+    @Column(nullable = false)
     private Double lado2;
+
+    protected Retangulo(){}
 
     public Retangulo(Double lado1, Double lado2){
         super(TipoFormas.RETANGULO);

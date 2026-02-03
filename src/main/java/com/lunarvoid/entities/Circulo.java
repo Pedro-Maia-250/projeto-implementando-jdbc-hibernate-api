@@ -1,15 +1,24 @@
 package com.lunarvoid.entities;
 
 import com.lunarvoid.enums.TipoFormas;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Column;
 
+
+@Entity
+@Table(name = "circulo")
 public class Circulo extends Forma {
-
+    
+    @Column(nullable = false)
     private Double diametro;
 
     public Circulo(Double diametro){
         super(TipoFormas.CIRCULO);
         setDiametro(diametro);
     }
+
+    protected Circulo(){}
 
     private void setDiametro(Double diametro){
         this.diametro = diametro;
