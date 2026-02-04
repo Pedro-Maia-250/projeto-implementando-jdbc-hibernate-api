@@ -1,4 +1,4 @@
-//api
+//aqui havera uma implementação de persistencia de dados com uso de uma api em um servidor externo
 
 package com.lunarvoid;
 
