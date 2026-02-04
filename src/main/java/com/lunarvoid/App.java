@@ -16,10 +16,9 @@ import com.lunarvoid.entities.Retangulo;
 
 public class App {
     public static void main(String[] args) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("java-jpa");
+        EntityManager em = emf.createEntityManager();
         try{
-            
-            EntityManagerFactory emf = Persistence.createEntityManagerFactory("java-jpa");
-            EntityManager em = emf.createEntityManager();
 
             em.getTransaction().begin();
 
@@ -39,11 +38,12 @@ public class App {
                 System.out.println(forma);
             }
 
-            em.close();
-            emf.close();
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
+        }finally{
+            if (em != null && em.isOpen()) em.close();
+            if (emf != null && emf.isOpen()) emf.close();
+            com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkedShutdown();
         }
     }
 }
