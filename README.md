@@ -12,4 +12,4 @@ implementadas sobre a mesma base de domínio.
 Cada branch representa uma abordagem arquitetural distinta.
 
 ## Modelo de dominio
-![Modelo de dominio](assets/diagrama-de-dominio-D.H.S.pdf)
+![Modelo de dominio](assets/diagrama-de-dominio-D.H.S.png)
